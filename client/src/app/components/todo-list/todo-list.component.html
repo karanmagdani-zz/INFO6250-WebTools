@@ -1,0 +1,43 @@
+<div class="row">
+  <table *ngIf="todoItems && todoItems.length > 0; else no_elements" class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Assigned To</th>
+          <th scope="col">Date Modified</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of todoItems">
+          <th scope="row">{{ item.id }}</th>
+          <td>{{ item.name }}</td>
+          <td>
+            <span *ngIf="item.status == 1" class="badge badge-primary">New</span>
+            <span *ngIf="item.status == 2" class="badge badge-success">Ready for Test</span>
+            <span *ngIf="item.status == 3" class="badge badge-info">In Progress</span>
+            <span *ngIf="item.status == 4" class="badge badge-dark">Closed</span>
+            <span *ngIf="item.status == 5" class="badge badge-warning">Needs Info</span>
+          </td>
+          <td>{{ item.assignedTo }}</td>
+          <td>{{item.date | date: 'medium'}}
+          </td>
+          <td>
+            <a class="btn btn-primary" routerLink="/todo-item/{{item.id}}">
+              Edit
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #no_elements>
+        <h1>Add your first todo item!</h1>
+    </ng-template>
+</div>
+<div class="row">
+  <a class="btn btn-success" routerLink="/todo-add">
+    Add todo item
+  </a>
+</div>
