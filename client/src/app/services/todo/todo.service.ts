@@ -29,7 +29,7 @@ export class TodoService {
 
   updateItem(todoItem: Task): Observable<any> {
     const getLink = 'http://localhost:5000/api/updatetask';
-    return this.http.put(getLink + '/' + todoItem.id, todoItem, httpOptions);
+    return this.http.put(getLink + '/' + todoItem.Id, todoItem, httpOptions);
   }
 
   deleteItem(id: number): Observable<any> {

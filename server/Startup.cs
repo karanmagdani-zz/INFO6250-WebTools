@@ -36,7 +36,8 @@ namespace TodoApi
                     
                 });
             });
-            services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+            services.AddDbContext<TodoContext>(opt => 
+                opt.UseSqlServer(Configuration.GetConnectionString("TaskContext")));
             services.AddMvc();
         }
 

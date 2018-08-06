@@ -1,4 +1,5 @@
 export class Task {
+  [x: string]: any;
   public Id: number;
   public Name: string;
   public Description: string;

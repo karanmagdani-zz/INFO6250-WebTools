@@ -3,6 +3,7 @@ import { TodoService } from '../../services/todo/todo.service';
 import { Location } from '@angular/common';
 import { Task } from '../Task/task.data';
 import { TaskService } from '../Task/task.service';
+import { Logger } from 'angular2-logger/core';
 
 @Component({
   selector: 'app-todo-add',
@@ -20,7 +21,8 @@ export class TodoAddComponent implements OnInit {
   constructor(
     private todoService: TodoService,
     private taskService: TaskService,
-    private location: Location
+    private location: Location,
+    private _logger: Logger
   ) {
     this.task = new Task();
    }
@@ -35,6 +37,7 @@ export class TodoAddComponent implements OnInit {
 
   setStatus(event: any) {
     this.status = event.target.value;
+    this._logger.warn('This is a priority level 3 warning message...');
   }
 
   setAssignment(event: any) {

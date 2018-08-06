@@ -12539,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/karanmagdani/Documents/Github/ToDo-app-angular5-dotnet-master/server/TodoApi.csproj",
+      "projectUniqueName": "/Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "/Users/karanmagdani/Documents/Github/ToDo-app-angular5-dotnet-master/server/TodoApi.csproj",
+      "projectPath": "/Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/TodoApi.csproj",
       "packagesPath": "/Users/karanmagdani/.nuget/packages/",
-      "outputPath": "/Users/karanmagdani/Documents/Github/ToDo-app-angular5-dotnet-master/server/obj/",
+      "outputPath": "/Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

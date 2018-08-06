@@ -67,7 +67,7 @@ export class TodoItemComponent implements OnInit {
   }
 
   delete(): void {
-    this.todoService.deleteItem(this.task.id)
+    this.todoService.deleteItem(this.task.Id)
       .subscribe(res => { console.log(res); this.location.back(); });
   }
 
