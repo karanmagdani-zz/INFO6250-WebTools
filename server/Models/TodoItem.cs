@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using Microsoft.AspNetCore.Http;
 
 namespace TodoApi.Models
 {
@@ -11,7 +12,7 @@ namespace TodoApi.Models
         {
             
         }
-        public TodoItem(int id, string name, int status, string description, string assignedTo, long date)
+        public TodoItem(int id, string name, int status, string description, string assignedTo, long date, IFormFile file)
         {
             this.Id = id;
             this.Name = name;
@@ -30,5 +31,6 @@ namespace TodoApi.Models
         public string AssignedTo { get; set; }
 
         public long Date { get; set; }
+
     }
 }

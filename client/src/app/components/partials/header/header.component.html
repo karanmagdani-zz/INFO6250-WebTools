@@ -13,7 +13,14 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/graphs">Data Visualization</a>
           </li>
+          <li *ngIf="!givenName" class="nav-item">
+            <a class="nav-link" (click)="login()">Login</a>
+          </li>
+          <li *ngIf="givenName" class="nav-item" style="float:right">
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
         </ul>
       </div>
   </div>
 </nav>
+<!-- <h4 style="text-align:center; margin-top: 3%" id="remove" *ngIf="givenName"> <a routerLink="/todo-list">Welcome, {{ givenName }} </a></h4> -->

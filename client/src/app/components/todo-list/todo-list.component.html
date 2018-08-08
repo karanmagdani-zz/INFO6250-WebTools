@@ -1,4 +1,5 @@
 <div class="row">
+
   <table *ngIf="todoItems && todoItems.length > 0; else no_elements" class="table">
       <thead>
         <tr>
@@ -11,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of todoItems">
+        <tr *ngFor="let item of todoItems" >
           <th scope="row">{{ item.id }}</th>
           <td>{{ item.name }}</td>
           <td>
@@ -33,11 +34,11 @@
       </tbody>
     </table>
     <ng-template #no_elements>
-        <h1>Add your first todo item!</h1>
+        <h1>Add Your first task here!</h1>
     </ng-template>
 </div>
 <div class="row">
   <a class="btn btn-success" routerLink="/todo-add">
-    Add todo item
+    Add Task
   </a>
 </div>

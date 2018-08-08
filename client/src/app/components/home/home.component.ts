@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
-import { Router } from '@angular/router';
+
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class HeaderComponent {
+export class HomeComponent {
 
-  constructor(private oauthService: OAuthService,
-  private router: Router) { }
-
+  constructor(private oauthService: OAuthService) {
+  }
 
   login() {
     this.oauthService.initImplicitFlow();
@@ -27,10 +26,6 @@ export class HeaderComponent {
       return null;
     }
     return claims['name'];
-  }
-
-  removeMe() {
-
   }
 
 }

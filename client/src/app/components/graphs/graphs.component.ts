@@ -9,11 +9,11 @@ import { TodoService } from '../../services/todo/todo.service';
 })
 export class GraphsComponent implements OnInit {
   task: Task[];
-  newStatus: number;
-  readyStatus: number;
-  needsInfoStatus: number;
-  inProgressStatus: number;
-  closedStatus: number;
+  newStatus = 0;
+  readyStatus = 0;
+  needsInfoStatus = 0;
+  inProgressStatus = 0;
+  closedStatus = 0;
   public doughnutChartLabels: string[] = ['New', 'Ready for Test', 'Closed', 'Needs Info', 'In Progress'];
   public doughnutChartData: number[] = [1, 1, 1, 1, 1];
   public doughnutChartType = 'doughnut';
@@ -41,15 +41,15 @@ export class GraphsComponent implements OnInit {
 
   countStatus(tasklist: Task[]) {
     for (const _task in tasklist) {
-      if (tasklist[_task].Status === 1) {
+      if (tasklist[_task].status === 1) {
         this.newStatus++;
-      } else if ( tasklist[_task].Status === 2) {
+      } else if ( tasklist[_task].status === 2) {
         this.readyStatus++;
-      } else if ( tasklist[_task].Status === 3) {
+      } else if ( tasklist[_task].status === 3) {
         this.inProgressStatus++;
-      } else if ( tasklist[_task].Status === 4) {
+      } else if ( tasklist[_task].status === 4) {
         this.closedStatus++;
-      } else if ( tasklist[_task].Status === 5) {
+      } else if ( tasklist[_task].status === 5) {
         this.needsInfoStatus++;
       }
     }

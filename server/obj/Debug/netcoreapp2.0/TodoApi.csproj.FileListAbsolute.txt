@@ -24,7 +24,6 @@
 /Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/bin/Debug/netcoreapp2.0/TodoApi.runtimeconfig.dev.json
 /Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/bin/Debug/netcoreapp2.0/TodoApi.dll
 /Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/bin/Debug/netcoreapp2.0/TodoApi.pdb
-/Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/obj/Debug/netcoreapp2.0/TodoApi.csprojAssemblyReference.cache
 /Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/obj/Debug/netcoreapp2.0/TodoApi.csproj.CoreCompileInputs.cache
 /Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/obj/Debug/netcoreapp2.0/TodoApi.AssemblyInfoInputs.cache
 /Users/karanmagdani/Documents/Github/INFO6250-FinalProject/server/obj/Debug/netcoreapp2.0/TodoApi.AssemblyInfo.cs

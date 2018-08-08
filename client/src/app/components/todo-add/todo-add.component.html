@@ -1,61 +1,63 @@
-<div class="form-group">
+<form (ngSubmit)="create()" ngNativeValidate>
+  <div class="form-group">
+    <h6>Task Name</h6>
+    <input (input)="setName($event)"
+            type="text"
+            class="form-control"
+            id="task-name"
+            placeholder="Enter Task name" required>
 
-  <h6>Task Name</h6>
-  <input (input)="setName($event)"
-          type="text"
-          class="form-control"
-          id="task-name"
-          placeholder="Enter Task name">
+      <h6>Task Description</h6>
+    <input (input)="setDescription($event)"
+            type="text"
+            class="form-control"
+            id="task-description"
+            placeholder="Enter Task Description" required>
 
-    <h6>Task Description</h6>
-  <input (input)="setDescription($event)"
-          type="text"
-          class="form-control"
-          id="task-description"
-          placeholder="Enter Task Description">
+    <h6>Select Status</h6>
+    <input (input)="setStatus($event)"
+            type="radio"
+            name="status"
+            class="form-radio"
+            id="status"
+            checked
+            value="1"
+            > New
+    <input (input)="setStatus($event)"
+            type="radio"
+            name="status"
+            class="form-radio"
+            id="status"
+            value="2"
+            > Ready For Test
+    <input (input)="setStatus($event)"
+            type="radio"
+            name="status"
+            class="form-radio"
+            id="status"
+            value="3"
+            > In Progress
+    <input (input)="setStatus($event)"
+            type="radio"
+            name="status"
+            class="form-radio"
+            id="status"
+            value="4"
+            > Closed
+    <input (input)="setStatus($event)"
+            type="radio"
+            name="status"
+            class="form-radio"
+            id="status"
+            value="5"
+            > Needs Info
 
-  <h6>Select Status</h6>
-  <input (input)="setStatus($event)"
-          type="radio"
-          name="status"
-          class="form-radio"
-          id="status"
-          value="1"
-          > New
-  <input (input)="setStatus($event)"
-          type="radio"
-          name="status"
-          class="form-radio"
-          id="status"
-          value="2"
-          > Ready For Test
-  <input (input)="setStatus($event)"
-          type="radio"
-          name="status"
-          class="form-radio"
-          id="status"
-          value="3"
-          > In Progress
-  <input (input)="setStatus($event)"
-          type="radio"
-          name="status"
-          class="form-radio"
-          id="status"
-          value="4"
-          > Closed
-  <input (input)="setStatus($event)"
-          type="radio"
-          name="status"
-          class="form-radio"
-          id="status"
-          value="5"
-          > Needs Info
-
-  <h6>Assigned To</h6>
-  <input (input)="setAssignment($event)"
-          type="text"
-          class="form-control"
-          id="todo-name"
-          placeholder="Assigned To?">
-</div>
-<button (click)="create()" class="btn btn-primary">Add Task</button>
+    <h6>Assigned To</h6>
+    <input (input)="setAssignment($event)"
+            type="text"
+            class="form-control"
+            id="todo-name"
+            placeholder="Assigned To?" required>
+    <button type="submit" id="save" class="btn btn-primary">Add Task</button>
+  </div>
+</form>

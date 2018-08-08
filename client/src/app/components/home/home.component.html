@@ -1,0 +1,18 @@
+<div *ngIf="givenName" >
+  <!-- <h2>Welcome, {{givenName}}!</h2>
+  <button (click)="logout()">Logout</button>
+  <p><a routerLink="/search" routerLinkActive="active">Search</a></p> -->
+  <h4 style="text-align:center; margin-top: 3%" id="remove" *ngIf="givenName"> <a routerLink="/todo-list">Welcome, {{ givenName }}, Click here to continue </a></h4>
+  <img src="/src/assets/scrum.png" style="display: block;
+  margin-left: auto;
+  margin-right: auto;">
+</div>
+
+
+
+<div *ngIf="!givenName">
+  <h1 style="text-align: center; margin-top: 3%">Please Login to continue</h1>
+  <img src="/src/assets/scrum.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;">
+</div>
